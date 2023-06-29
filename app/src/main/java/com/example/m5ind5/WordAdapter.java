@@ -43,11 +43,22 @@ public class WordAdapter  extends  RecyclerView.Adapter<WordAdapter.WordViewHold
         return mWordlist.size();
     }
 
-    public class WordViewHolder extends RecyclerView.ViewHolder {
+    public class WordViewHolder  extends RecyclerView.ViewHolder {
         private TextView textView;
         public WordViewHolder(@NonNull WordItemListBinding mBinding) {
             super(mBinding.getRoot());
+
+            mBinding.textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    mWordlist.add("Cliked PALABRA"+ mWordlist.size());
+
+                }
+            });
             textView= mBinding.textView;
+
+
         }
     }
 

@@ -35,6 +35,7 @@ public class FirstFragment extends Fragment {
 
         WordAdapter adapter = new WordAdapter(setData());
 
+
         binding.recyclerview1.setAdapter(adapter);
 
 
